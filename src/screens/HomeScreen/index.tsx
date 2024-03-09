@@ -1,9 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
-
 
 function index() {
   const [fill, setFill] = useState<number>(0); // Initialize fill state to 0
@@ -42,8 +41,12 @@ function index() {
             <Text style={{ color: 'white' }}>deleteCoffee</Text>
           </TouchableOpacity>
         </View>
-        <View>
-          
+        <View style={styles.homeLoyaltyIcons}>
+          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_fill.png')} />
+          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_fill.png')} />
+          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_outline.png')} />
+          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_outline.png')} />
+          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_outline.png')} />
         </View>
       </View>
 
