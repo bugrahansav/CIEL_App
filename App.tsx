@@ -1,33 +1,18 @@
 import { StyleSheet, View } from 'react-native';
-
-import Header from './src/components/Header';
-import HomeScreen from './src/screens/HomeScreen';
-import BottomNavigator from './src/components/BottomNavigator';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+import Header from './src/components/Header';
+import RootNavigator from './src/navigators/RootNavigator';
 
 
 
 export default function App() {
 
   return (
-    <SafeAreaProvider>
-      <View>
+      <NavigationContainer>
         <Header />
-      </View>
-      <View style={styles.container}>
-        <HomeScreen />
-      </View>
-      <View>
-        <BottomNavigator />
-      </View>
-    </SafeAreaProvider>
+        <RootNavigator />
+      </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#131314'
-  }
-});
 

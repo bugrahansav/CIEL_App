@@ -4,7 +4,8 @@ const {height} = Dimensions.get("window")
 
 const styles = StyleSheet.create({
   homeScreenContainer: {
-
+        flex: 1,
+        backgroundColor: '#131314'
   },
   homeStoryTab: {
     height: height * 0.13,

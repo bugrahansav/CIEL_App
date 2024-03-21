@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
+import Header from '../../components/Header';
 
-function index() {
+function HomeScreen() {
   const [fill, setFill] = useState<number>(0); // Initialize fill state to 0
 
   // Update fill state (example, adjust based on your logic)
@@ -18,7 +19,6 @@ function index() {
   };
   return (
     <View style={styles.homeScreenContainer}>
-
       <View style={styles.homeStoryTab}></View>
 
       <View style={styles.homeLoyalty}>
@@ -42,11 +42,11 @@ function index() {
           </TouchableOpacity>
         </View>
         <View style={styles.homeLoyaltyIcons}>
-          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_fill.png')} />
-          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_fill.png')} />
-          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_outline.png')} />
-          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_outline.png')} />
-          <Image style={styles.icons} source={require('../../../assets/icons/coffee_cup_ciel_outline.png')} />
+          <Image style={styles.icons} source={require('../../../assets/coffee_cup_ciel_fill.png')} />
+          <Image style={styles.icons} source={require('../../../assets/coffee_cup_ciel_fill.png')} />
+          <Image style={styles.icons} source={require('../../../assets/coffee_cup_ciel_outline.png')} />
+          <Image style={styles.icons} source={require('../../../assets/coffee_cup_ciel_outline.png')} />
+          <Image style={styles.icons} source={require('../../../assets/coffee_cup_ciel_outline.png')} />
         </View>
       </View>
 
@@ -54,4 +54,4 @@ function index() {
   )
 }
 
-export default index;
+export default HomeScreen;

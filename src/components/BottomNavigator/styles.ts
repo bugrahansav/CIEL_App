@@ -39,6 +39,8 @@ const styles = StyleSheet.create({
   },
   iconTxt: {
     color: 'white',
+  },
+  zort: {
   }
 })
 
