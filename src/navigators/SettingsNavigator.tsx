@@ -7,7 +7,7 @@ function SettingsNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen 
-        name='Sttgs'
+        name='Settings_'
         component={SettingsScreen}
       />
     </Stack.Navigator>

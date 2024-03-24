@@ -1,16 +1,17 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-paper';
-import MainNavigator from './MainNavigator';
+import { TouchableOpacity } from 'react-native';
+import styles from '../components/BottomNavigator/styles';
+import HomeNavigator from './HomeNavigator';
 import SettingsNavigator from './SettingsNavigator';
 import QRNavigator from './QRNavigator';
-import { TouchableOpacity, View } from 'react-native';
-import styles from '../components/BottomNavigator/styles';
+import SettingsScreen from '../screens/SettingsScreen';
 
 
 const Tab = createBottomTabNavigator();
 
-function RootNavigator() {
+function TabNavigator({ onLogout }) {
   const CustomTabBarQRButton = ({ children }) => (
     <TouchableOpacity>
       <Icon source='qrcode' size={25} />
@@ -27,7 +28,7 @@ function RootNavigator() {
     >
       <Tab.Screen
         name="Home"
-        component={MainNavigator}
+        component={HomeNavigator}
         options={{
           tabBarActiveBackgroundColor: '#131314',
           tabBarInactiveBackgroundColor: '#131314',
@@ -40,13 +41,11 @@ function RootNavigator() {
         name="QR"
         component={QRNavigator}
         options={{
-          tabBarButton: (props) => <CustomTabBarQRButton {...props}/>
+          tabBarButton: (props) => <CustomTabBarQRButton {...props} />
         }}
       />
-      
       <Tab.Screen
         name="Settings"
-        component={SettingsNavigator}
         options={{
           tabBarActiveBackgroundColor: '#131314',
           tabBarInactiveBackgroundColor: '#131314',
@@ -54,10 +53,12 @@ function RootNavigator() {
             <Icon source='account-settings-outline' size={25} color='white' />
           )
         }}
-      />
+      >
+        {props => <SettingsScreen {...props} onLogout={onLogout} />}
+      </Tab.Screen>
     </Tab.Navigator>
-  
+
   );
 }
 
-export default RootNavigator;
+export default TabNavigator;

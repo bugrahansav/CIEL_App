@@ -7,7 +7,7 @@ function QRNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen 
-        name='Qr'
+        name='Qr_'
         component={QRScreen}
       />
     </Stack.Navigator>
