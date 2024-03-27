@@ -8,7 +8,7 @@ function index () {
   return (
     <View style={ styles.header }>
       <Text style={ styles.headerTxt }>
-        C O F F E E C I E L
+        coffeeciel
         </Text>
     </View>
   )

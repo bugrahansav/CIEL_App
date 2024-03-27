@@ -13,10 +13,9 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end'
   },
   headerTxt: {
+    fontFamily: 'Pacifico-Regular',
     fontSize: 30,
-    fontWeight: 'bold',
-    color: 'white',
-    margin: 10
+    color: 'white'
   }
 })
 
